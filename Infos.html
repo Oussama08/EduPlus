@@ -269,7 +269,9 @@
 								<th>Cas confirmés</th>
 								<th>Guéris</th>
 								<th>Décès</th>
+								<th>Aujourd'hui</th>
 							</tr>
+							
 					
 						
 			
@@ -420,8 +422,9 @@
 				covid_data += '<tr>';
 				covid_data += '<td>'+value.country+'</td>';
 				covid_data += '<td>'+value.cases+'</td>';
-				covid_data += '<td>'+value.recovered+'</td>';
-				covid_data += '<td>'+value.deaths+'</td>';
+				covid_data += '<td style="color:green">'+value.recovered+'</td>';
+				covid_data += '<td style="color:red">'+value.deaths+'</td>';
+				covid_data += '<td style="color:blue">'+'+'+' '+ value.todayCases+'</td>';
 				covid_data += '</tr>';
 			});
 			$('#covid_table').append(covid_data);
