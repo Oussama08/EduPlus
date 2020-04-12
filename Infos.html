@@ -414,14 +414,14 @@
 </html>
 <script>
 	$(document).ready(function(){
-		$.getJSON("covidata2.json", function(data){
+		$.getJSON("covidata.json", function(data){
 			var covid_data='';
-			$.each(data.Countries, function(key, value){
+			$.each(data, function(key, value){
 				covid_data += '<tr>';
-				covid_data += '<td>'+value.Country+'</td>';
-				covid_data += '<td>'+value.TotalConfirmed+'</td>';
-				covid_data += '<td>'+value.TotalRecovered+'</td>';
-				covid_data += '<td>'+value.TotalDeaths+'</td>';
+				covid_data += '<td>'+value.country+'</td>';
+				covid_data += '<td>'+value.cases+'</td>';
+				covid_data += '<td>'+value.recovered+'</td>';
+				covid_data += '<td>'+value.deaths+'</td>';
 				covid_data += '</tr>';
 			});
 			$('#covid_table').append(covid_data);
