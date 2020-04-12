@@ -414,7 +414,7 @@
 </html>
 <script>
 	$(document).ready(function(){
-		$.getJSON("covidata2.json", function(data){
+		$.get("https://coronavirus-19-api.herokuapp.com/counties", function(data){
 			var covid_data='';
 			$.each(data, function(key, value){
 				covid_data += '<tr>';
@@ -425,6 +425,8 @@
 				covid_data += '</tr>';
 			});
 			$('#covid_table').append(covid_data);
-		});
+		}).fail(function(){
+			$('#covid_table').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
+	});
 	});
 </script>
