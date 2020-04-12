@@ -6,7 +6,7 @@ var requestOptions = {
 };
 console.log("lla");
 
-fetch("https://api.covid19api.com/summary", requestOptions)
+fetch("https://coronavirus-19-api.herokuapp.com/countries", requestOptions)
   .then((response) => response.json())
   .then((result) => fs.writeFileSync("covidata2.json", JSON.stringify(result)))
   .catch((error) => console.log("error", error));
