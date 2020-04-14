@@ -1,8 +1,7 @@
 table {
   width: 100%;
   color: rgb(37, 20, 99);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Poppins", sans-serif;
 
   border-collapse: collapse;
   border-spacing: 0;
@@ -37,8 +36,8 @@ tr:nth-child(odd) td {
 }
 
 tr td:hover {
-  background: #ff48f2;
-  color: #fff;
+  background: #ffbcfbe3;
+  color: rgb(65, 65, 65);
 }
 
 .card {
