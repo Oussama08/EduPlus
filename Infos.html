@@ -95,7 +95,7 @@
 				<div class="col-lg-8">
 					<div class="section-tittle text-center mb-80">
 						<span style="color:#ff48f2">Covid-19 Infos</span>
-						<h2>Statistiques Mondiale<br>du COVID-19​</h2>
+						<h2>Maroc, Statistiques <br>du COVID-19​</h2>
 					</div>
 				</div>
 			</div>
@@ -259,17 +259,26 @@
 						<blockquote class="generic-blockquote">
 							"This is the biggest event that people will experience in their entire lives," Gates told FT. He said that in response to this outbreak, future governments will have "standby diagnostics, deep antiviral libraries, and early warning systems."
 						</blockquote>
-						<iframe width="100%" height="620" src="https://www.youtube.com/embed/ie6lRKAdvuY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						
+						
+
 					</div>
 				</div>
 			</div>
+			<div>
+				
+				<h3 class="mb-30" style="margin-left:400px"><img src="https://covid19ma.netlify.com/flag_maroc.png"  align="middle"style="border-radius: 50%;margin-right:20px;height:40px;width:40px;margin-left:100px">Maroc</h3>
+			</div>
+			
 			<table id="covid_table">
-					
+							
+
 							<tr>
-								<th>Pays</th>
+								
 								<th>Cas confirmés</th>
 								<th>Guéris</th>
 								<th>Décès</th>
+								<th>Active</th>
 								<th>Aujourd'hui</th>
 							</tr>
 							
@@ -277,6 +286,24 @@
 						
 			
 			</table>
+			<div>
+				<p style="text-align:center;margin-top:30px;margin-bottom:30px">Source : <a href="https://www.sante.gov.ma/pages/actualites.aspx?idactu=410" style="color:#5B2A7D;margin-left:7px">https://www.sante.gov.ma/pages/actualites.aspx?idactu=410</a></p>
+			</div>
+			<table id="covid_table_regions">
+					
+							<tr>
+								<th>Region</th>
+								
+								<th>Cas Confirmés</th>
+							</tr>
+							
+							
+					
+						
+			
+			</table>
+			<h3 style="text-align:center;margin-top:40px;color:#5B2A7D">L'interview de Bill Gates avec BBC</h3>
+			<iframe style="margin-top:40px" width="100%" height="550" src="https://www.youtube.com/embed/ie6lRKAdvuY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 			
 			
@@ -417,20 +444,80 @@
 </html>
 <script>
 	$(document).ready(function(){
-		$.get("https://corona.lmao.ninja/v2/countries", function(data){
+		$.get("https://corona.lmao.ninja/v2/countries/MA", function(data){
 			var covid_data='';
-			$.each(data, function(key, value){
+				
 				covid_data += '<tr>';
-				covid_data += '<td>'+value.country+'</td>';
-				covid_data += '<td>'+value.cases+'</td>';
-				covid_data += '<td style="color:green">'+value.recovered+'</td>';
-				covid_data += '<td style="color:red">'+value.deaths+'</td>';
-				covid_data += '<td style="color:blue">'+'+'+' '+ value.todayCases+'</td>';
+				
+				covid_data += '<td>'+data.cases+'</td>';
+				covid_data += '<td style="color:#00D910">'+data.recovered+'</td>';
+				covid_data += '<td style="color:#EC0000">'+data.deaths+'</td>';
+				covid_data += '<td style="color:#FF7801">'+data.active+'</td>';
+				covid_data += '<td style="color:blue">'+'+'+' '+ data.todayCases+'</td>';
 				covid_data += '</tr>';
-			});
+			
 			$('#covid_table').append(covid_data);
 		}).fail(function(){
 			$('#covid_table').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
+	});
+	});
+		$(document).ready(function(){
+		$.get("https://moroccostats.herokuapp.com/stats/coronavirus/countries/morocco/regions", function(data){
+			var covid_data='';
+			
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Oriental"+'</td>';
+				covid_data += '<td>'+data.Oriental+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Rabat-Salé-Kenitra"+'</td>';
+				covid_data += '<td>'+data.RabatSalKenitra+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Casa-Settat"+'</td>';
+				covid_data += '<td>'+data.CasaSettat+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Tanger-Tetouan-AlHoceima"+'</td>';
+				covid_data += '<td>'+data.TangerTetouanAlHoceima+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Marrakech-Safi"+'</td>';
+				covid_data += '<td>'+data.MarrakechSafi+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Fes-Meknes"+'</td>';
+				covid_data += '<td>'+data.Fsmeknes+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Beni Mellal-Khenifra"+'</td>';
+				covid_data += '<td>'+data.BeniMellalKhnifra+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Laayoune-Sakia El Hamra"+'</td>';
+				covid_data += '<td>'+data.LayouneSakiaElHamra+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Daraa-Tafilalet"+'</td>';
+				covid_data += '<td>'+data.Daraatafilalet+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Dakhla-Oued EdDahab"+'</td>';
+				covid_data += '<td>'+data.DakhlaOuedEdDahab+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Guelmim-Oued Noun"+'</td>';
+				covid_data += '<td>'+data.GuelmimOuedNoun+'</td>';
+				covid_data += '</tr>';
+				covid_data += '<tr >';
+				covid_data += '<td>'+"Souss-Massa"+'</td>';
+				covid_data += '<td>'+data.SoussMassa+'</td>';
+				covid_data += '</tr>';
+				
+			
+			$('#covid_table_regions').append(covid_data);
+		}).fail(function(){
+			$('#covid_table_regions').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
 	});
 	});
 </script>
