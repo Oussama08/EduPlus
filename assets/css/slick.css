@@ -1,3 +1,19 @@
+hr.sep {
+  padding: 0;
+  border: none;
+  border-top: medium double rgb(83, 39, 104);
+  color: rgb(83, 39, 104);
+  text-align: center;
+}
+hr.sep:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
 table {
   width: 100%;
   color: rgb(37, 20, 99);
