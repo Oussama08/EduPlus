@@ -297,12 +297,15 @@
 			<!--<div style="margin-top:30px;margin-bottom:30px;height:60px;width:100%;background-color: #E5E2EB;"></div> -->
 			
 			<span id="khaliya"  class="badge badge-success badge-pill" ><span id="num">080-100-4747</span> : خلية تتبع و رصد فيروس كورونا</span><br><br>
-			<span id="khaliya"  style="margin-bottom:50px" class="badge badge-success badge-pill" ><span id="num">141</span>     :  المساعدة الطبية الاستعجالية</span>
+			<span id="khaliya"  style="margin-bottom:50px;width:27%" class="badge badge-success badge-pill" ><span id="num">141</span>     :  المساعدة الطبية الاستعجالية</span>
 			<h3 style="margin-top:30px" class="mb-30">Liens utiles :</h3>
 			
-			<a target="_blank" id="links" href="https://www.sante.gov.ma/Pages/Accueil.aspx" class="badge badge-info badge-pill">Site officiel de la Ministre de la Santé</a><br><br>
-			<a target="_blank" id="links" href="https://www.facebook.com/ministere.sante.ma/" class="badge badge-info badge-pill">Page Facebook de la Ministre de la Santé</a><br><br>
+			<a id="links" href="https://www.sante.gov.ma/Pages/Accueil.aspx" class="badge badge-info badge-pill">Site officiel de la Ministre de la Santé</a><br><br>
+			<a id="links" href="https://www.facebook.com/ministere.sante.ma/" class="badge badge-info badge-pill">Page Facebook de la Ministre de la Santé</a><br><br><hr>
+			
+			<div  style="font-family:Poppins, sans-serif; width:65%;text-align:center;width:800px; margin:0 auto;" class="alert alert-warning" style="overflow-wrap: break-word;">source: <a align="center" target="_blank" href="#" class="alert-link">https://www.sante.gov.ma/pages/actualites.aspx?idactu=410</a></div>
 			<hr>
+
 
 			<div>
 				
@@ -471,7 +474,7 @@
 				
 				covid_data += '<td>'+data.cases+'</td>';
 				covid_data += '<td style="color:#00D910">'+data.recovered+'</td>';
-				covid_data += '<td style="color:#EC0000">'+data.deaths+'</td>';
+				covid_data += '<td style="color:rgb(255, 49, 49)">'+data.deaths+'</td>';
 				covid_data += '<td style="color:#FF7801">'+data.active+'</td>';
 				covid_data += '<td style="color:blue">'+'+'+' '+ data.todayCases+'</td>';
 				covid_data += '</tr>';			
@@ -548,7 +551,7 @@
                 covid_data += '<td>'+value.country+'</td>';
                 covid_data += '<td>'+value.cases+'</td>';
                 covid_data += '<td style="color:#00D910">'+value.recovered+'</td>';
-                covid_data += '<td style="color:#EC0000">'+value.deaths+'</td>';
+                covid_data += '<td style="color:rgb(255, 49, 49)">'+value.deaths+'</td>';
 				covid_data += '<td style="color:#FF7801">'+value.active+'</td>';
                 covid_data += '<td style="color:blue">'+'+'+' '+ value.todayCases+'</td>';
                 covid_data += '</tr>';
