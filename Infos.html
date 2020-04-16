@@ -95,7 +95,7 @@
 				<div class="col-lg-8">
 					<div class="section-tittle text-center mb-80">
 						<span style="color:#ff48f2">Covid-19 Infos</span>
-						<h2>Maroc, Statistiques <br>du COVID-19​</h2>
+						<h2>Statistiques Mondiale<br>du COVID-19​</h2>
 					</div>
 				</div>
 			</div>
@@ -280,11 +280,7 @@
 								<th>Décès</th>
 								<th>Active</th>
 								<th>Aujourd'hui</th>
-							</tr>
-							
-					
-						
-			
+							</tr>			
 			</table>
 			
 			
@@ -308,6 +304,23 @@
 			<div>
 				<p style="text-align:center;margin-top:30px;margin-bottom:30px">Source : <a href="https://www.sante.gov.ma/pages/actualites.aspx?idactu=410" style="color:#5B2A7D;margin-left:7px">https://www.sante.gov.ma/pages/actualites.aspx?idactu=410</a></p>
 			</div>
+			<div>
+				
+				<h3 class="mb-30" style="text-align:center"><img src="https://pngimage.net/wp-content/uploads/2018/06/monde-png.png"  align="middle"style="border-radius: 50%;margin-right:20px;height:40px;width:40px;">Le Monde</h3>
+			</div>
+			<table id="covid_table3" style="margin-top:40px">
+							
+
+							<tr>
+								<th></th>
+								<th>Pays</th>
+								<th>Cas confirmés</th>
+								<th>Guéris</th>
+								<th>Décès</th>
+								<th>Active</th>
+								<th>Aujourd'hui</th>
+							</tr>			
+			</table>
 			<h3 style="text-align:center;margin-top:40px;color:#5B2A7D">L'interview de Bill Gates avec BBC</h3>
 			<iframe style="margin-top:40px" width="100%" height="550" src="https://www.youtube.com/embed/ie6lRKAdvuY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -394,7 +407,7 @@
                      <div class="row d-flex align-items-center">
                          <div class="col-xl-12 ">
                              <div class="footer-copy-right text-center">
-                                 <p>Made with some <i class="fas fa-code"></i> and a lot of <i class="fas fa-heart"></i> by <a href="https://oussama08.github.io/PersonalPortfolio/" target="_blank"> Oussama Samoudi </a> & <a href="https://www.instagram.com/idriss.touil/" target="_blank"> Idriss Touil </a> <i class="fas fa-copyright"></i> 2020 | All rights reserved </p>
+                                 <p>Made with some <i class="fas fa-code"></i> and a lot of <i class="fas fa-heart"></i> by <a href="https://oussama08.github.io/PersonalPortfolio/" target="_blank"> Oussama </a> & <a href="https://www.instagram.com/idriss.touil/" target="_blank"> Idriss </a> & <a href="https://www.facebook.com/AymanEnLigne/" target="_blank"> Aymane </a><i class="fas fa-copyright"></i> 2020 | All rights reserved </p>
                              </div>
                          </div>
                      </div>
@@ -460,8 +473,7 @@
 				covid_data += '<td style="color:#EC0000">'+data.deaths+'</td>';
 				covid_data += '<td style="color:#FF7801">'+data.active+'</td>';
 				covid_data += '<td style="color:blue">'+'+'+' '+ data.todayCases+'</td>';
-				covid_data += '</tr>';
-			
+				covid_data += '</tr>';			
 			$('#covid_table').append(covid_data);
 		}).fail(function(){
 			$('#covid_table').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
@@ -469,8 +481,7 @@
 	});
 		$(document).ready(function(){
 		$.get("https://moroccostats.herokuapp.com/stats/coronavirus/countries/morocco/regions", function(data){
-			var covid_data='';
-			
+			var covid_data='';			
 				covid_data += '<tr >';
 				covid_data += '<td>'+"Oriental"+'</td>';
 				covid_data += '<td>'+data.Oriental+'</td>';
@@ -526,4 +537,24 @@
 			$('#covid_table_regions').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
 	});
 	});
+	 $(document).ready(function(){
+        $.get("https://corona.lmao.ninja/v2/countries/", function(data){
+            var covid_data='';
+            $.each(data, function(key, value){
+
+                covid_data += '<tr>';
+				covid_data += '<td><img style="border-radius:30%;margin-left:40px;height:30px;width:30px;" src="https://www.countryflags.io/'+value.countryInfo.iso2+'/shiny/32.png"> '+'</td>';
+                covid_data += '<td>'+value.country+'</td>';
+                covid_data += '<td>'+value.cases+'</td>';
+                covid_data += '<td style="color:#00D910">'+value.recovered+'</td>';
+                covid_data += '<td style="color:#EC0000">'+value.deaths+'</td>';
+				covid_data += '<td style="color:#FF7801">'+value.active+'</td>';
+                covid_data += '<td style="color:blue">'+'+'+' '+ value.todayCases+'</td>';
+                covid_data += '</tr>';
+            });
+            $('#covid_table3').append(covid_data);
+        }).fail(function(){
+            $('#covid_table3').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
+    });
+    });
 </script>
