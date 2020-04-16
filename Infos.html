@@ -283,11 +283,7 @@
 							</tr>			
 			</table>
 			
-			
-			<hr class="sep">
-			
-
-			
+			<hr>	
 			<table id="covid_table_regions">
 					
 							<tr>
@@ -295,15 +291,19 @@
 								
 								<th>Cas Confirmés</th>
 							</tr>
-							
-							
-					
-						
-			
 			</table>
-			<div>
-				<p style="text-align:center;margin-top:30px;margin-bottom:30px">Source : <a href="https://www.sante.gov.ma/pages/actualites.aspx?idactu=410" style="color:#5B2A7D;margin-left:7px">https://www.sante.gov.ma/pages/actualites.aspx?idactu=410</a></p>
-			</div>
+			<hr>
+			<h3 style="margin-top:30px" class="mb-30">Numéros de téléphones utiles :</h3>
+			<!--<div style="margin-top:30px;margin-bottom:30px;height:60px;width:100%;background-color: #E5E2EB;"></div> -->
+			
+			<span id="khaliya"  class="badge badge-success badge-pill" ><span id="num">080-100-4747</span> : خلية تتبع و رصد فيروس كورونا</span><br><br>
+			<span id="khaliya"  style="margin-bottom:50px" class="badge badge-success badge-pill" ><span id="num">141   </span>     :  المساعدة الطبية الاستعجالية</span>
+			<h3 style="margin-top:30px" class="mb-30">Liens utiles :</h3>
+			
+			<a id="links" href="https://www.sante.gov.ma/Pages/Accueil.aspx" class="badge badge-info badge-pill">Site officiel de la Ministre de la Santé</a><br><br>
+			<a id="links" href="https://www.facebook.com/ministere.sante.ma/" class="badge badge-info badge-pill">Page Facebook de la Ministre de la Santé</a><br><br>
+			<hr>
+
 			<div>
 				
 				<h3 class="mb-30" style="text-align:center"><img src="https://pngimage.net/wp-content/uploads/2018/06/monde-png.png"  align="middle"style="border-radius: 50%;margin-right:20px;height:40px;width:40px;">Le Monde</h3>
@@ -321,6 +321,7 @@
 								<th>Aujourd'hui</th>
 							</tr>			
 			</table>
+			<hr>
 			<h3 style="text-align:center;margin-top:40px;color:#5B2A7D">L'interview de Bill Gates avec BBC</h3>
 			<iframe style="margin-top:40px" width="100%" height="550" src="https://www.youtube.com/embed/ie6lRKAdvuY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -543,7 +544,7 @@
             $.each(data, function(key, value){
 
                 covid_data += '<tr>';
-				covid_data += '<td><img style="border-radius:30%;align:center;height:30px;width:30px;" src="https://www.countryflags.io/'+value.countryInfo.iso2+'/shiny/32.png"> '+'</td>';
+				covid_data += '<td><img  style="border-radius:30%;align:center;height:30px;width:30px" src="https://www.countryflags.io/'+value.countryInfo.iso2+'/flat/32.png"> '+'</td>';
                 covid_data += '<td>'+value.country+'</td>';
                 covid_data += '<td>'+value.cases+'</td>';
                 covid_data += '<td style="color:#00D910">'+value.recovered+'</td>';
