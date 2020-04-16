@@ -1,5 +1,46 @@
 @import url(https://fonts.googleapis.com/earlyaccess/thabit.css);
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+span.danger:after {
+  background-color: #ff98d7f5;
+}
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.danger,
+.safe {
+  position: relative;
+  z-index: 0;
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+}
+@-webkit-keyframes blink2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.danger:after,
+.safe:after {
+  content: "";
+  top: 0;
+  left: 0;
+  padding: 1px;
+  position: absolute;
+  text-align: center;
+  -webkit-animation: blink2 2s ease-in-out infinite;
+  animation: blink2 2s ease-in-out infinite;
+  height: 25px;
+  width: 40px;
+  z-index: -1;
+}
 hr.sep {
   padding: 0;
   border: none;
@@ -73,7 +114,7 @@ tr:nth-child(odd) td {
 }
 
 tr td:hover {
-  background: #ffbcfbe3;
+  background: #ff98d7f5;
   color: rgb(65, 65, 65);
 }
 
