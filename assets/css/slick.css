@@ -8,6 +8,7 @@ span.danger:after {
   box-sizing: border-box;
 }
 
+
 .danger,
 .safe {
   position: relative;
@@ -118,12 +119,6 @@ tr td:hover {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.carder{
-  margin: 0.7rem;
-  margin-bottom: 5rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-}
 
 .container {
   padding: 0 16px;
@@ -134,6 +129,7 @@ tr td:hover {
   content: "";
   clear: both;
   display: table;
+
 }
 /* Slider */
 
@@ -189,6 +185,12 @@ tr td:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+a#telech{
+  color: #ff5c97;
+}
+a#telech:hover{
+  color: #5D00FF;
 }
 .slick-track:before,
 .slick-track:after {
