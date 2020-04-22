@@ -300,8 +300,8 @@
 			<div style=" margin:0 auto;text-align:center"><span id="khaliya"  class="badge badge-success badge-pill" ><span id="num">080-100-4747</span> : خلية تتبع و رصد فيروس كورونا</span></div><br><br>
 			<div style=" margin:0 auto;text-align:center;"><span id="khaliya"   class="badge badge-success badge-pill" ><span id="num">141</span>     :  المساعدة الطبية الاستعجالية</span></div>
 			<h3 style="margin-top:30px" class="mb-30">Liens utiles :</h3>
-			<div style="margin:0 auto;text-align:center"><a target="_blank" id="links" href="https://www.facebook.com/ministere.sante.ma/" class="badge badge-info badge-pill">Page Facebook de la Ministre de la Santé</a></div><br><br>
-			<div style=" margin:0 auto;text-align:center;"><a target="_blank" id="links"  href="https://www.sante.gov.ma/Pages/Accueil.aspx" class="badge badge-info badge-pill">Site officiel de la Ministre de la Santé</a></div><br>
+			<div style="margin:0 auto;text-align:center"><a  id="links" href="https://www.facebook.com/ministere.sante.ma/" class="badge badge-info badge-pill">Page Facebook de la Ministre de la Santé</a></div><br><br>
+			<div style=" margin:0 auto;text-align:center;"><a id="links"  href="https://www.sante.gov.ma/Pages/Accueil.aspx" class="badge badge-info badge-pill">Site officiel de la Ministre de la Santé</a></div><br>
 			<hr>
 			<div  style="font-family:Poppins, sans-serif;text-align:center; margin:0 auto;width:50%" class="alert alert-info" >source:<a align="center" target="_blank" href="https://www.sante.gov.ma/pages/actualites.aspx?idactu=410" class="alert-link">https://www.sante.gov.ma</a></div>
 			<hr>
@@ -482,7 +482,22 @@
 			$('#covid_table').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
 	});
 	});
-		$(document).ready(function(){
+	$(document).ready(function(){
+			 $.get("https://covidma.herokuapp.com/api", function(data){
+					 var covid_data='';
+					 $.each(data[1], function(key, value){
+
+							 covid_data += '<tr>';
+							 covid_data += '<td>'+value.region+'</td>';
+							 covid_data += '<td>'+value.cases+'</td>';
+							 covid_data += '</tr>';
+					 });
+					 $('#covid_table_regions').append(covid_data);
+			 }).fail(function(){
+					 $('#covid_table_regions').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
+	 });
+	 });
+		/*$(document).ready(function(){
 		$.get("https://moroccostats.herokuapp.com/stats/coronavirus/countries/morocco/regions", function(data){
 			var covid_data='';
 				covid_data += '<tr >';
@@ -540,6 +555,7 @@
 			$('#covid_table_regions').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
 	});
 	});
+	*/
 	 $(document).ready(function(){
         $.get("https://corona.lmao.ninja/v2/countries/", function(data){
             var covid_data='';
