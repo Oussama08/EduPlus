@@ -560,7 +560,10 @@
         $.get("https://corona.lmao.ninja/v2/countries/", function(data){
             var covid_data='';
             $.each(data, function(key, value){
-
+				if(value.country=="Western Sahara"){
+					return true;
+				}
+				else{
                 covid_data += '<tr>';
 				covid_data += '<td><img  style="border-radius:30%;align:center;height:30px;width:30px" src="https://www.countryflags.io/'+value.countryInfo.iso2+'/flat/32.png"> '+'</td>';
                 covid_data += '<td>'+value.country+'</td>';
@@ -569,7 +572,8 @@
                 covid_data += '<td style="color:rgb(255, 49, 49)">'+value.deaths+'</td>';
 				covid_data += '<td style="color:#FF7801">'+value.active+'</td>';
                 covid_data += '<td style="color:blue">'+'+'+' '+ value.todayCases+'</td>';
-                covid_data += '</tr>';
+				covid_data += '</tr>';
+			}
             });
             $('#covid_table3').append(covid_data);
         }).fail(function(){
