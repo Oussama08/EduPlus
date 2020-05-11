@@ -1,34 +1,83 @@
 @import url(https://fonts.googleapis.com/earlyaccess/thabit.css);
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 @font-face {
+  font-family: "Conv_STC-Regular";
 
+  src: url("https://download-internet-pdf-ebooks.com/css/fonts/STC-Regular.eot");
 
- font-family: 'Conv_STC-Regular';
+  src: url("https://download-internet-pdf-ebooks.com/css/fonts/STC-Regular.woff")
+      format("woff"),
+    url("https://download-internet-pdf-ebooks.com/css/fonts/STC-Regular.ttf")
+      format("truetype"),
+    url("https://download-internet-pdf-ebooks.com/css/fonts/STC-Regular.svg")
+      format("svg");
 
-
- src: url('https://download-internet-pdf-ebooks.com/css/fonts/STC-Regular.eot');
-
-
- src:  url('https://download-internet-pdf-ebooks.com/css/fonts/STC-Regular.woff') format('woff'), url('https://download-internet-pdf-ebooks.com/css/fonts/STC-Regular.ttf') format('truetype'), url('https://download-internet-pdf-ebooks.com/css/fonts/STC-Regular.svg') format('svg');
-
-
- font-weight: normal;
-
-
- font-style: normal;
-
-
+  font-weight: bolder;
 }
-#oun{
-    font-family: "Conv_STC-Regular" ;
+#drophwayj {
+  font-family: "Conv_STC-Regular";
+  direction: rtl;
+  color: #ff0783;
+  position: relative;
+  font-size: large;
 }
-#titles{
+#drophwayj:hover {
+  color: #270896;
+}
+#ounwan {
+  font-family: "Conv_STC-Regular";
+}
+#oun {
+  font-family: "Conv_STC-Regular";
+  direction: rtl;
+  color: #ffffff;
+  position: relative;
+  font-size: large;
+}
+#oun:hover {
+  color: #18395f;
+}
+#course {
+  font-family: "Conv_STC-Regular";
+  color: #270896;
+  font-size: larger;
+}
+#titles {
+  font-family: "Conv_STC-Regular";
+  direction: rtl;
+  color: #104488;
+  font-size: x-large;
+}
+.form-elegant .font-small {
+  font-size: 0.8rem;
+}
 
-  font-family: "Conv_STC-Regular" ;
-  float: right;
+.form-elegant .z-depth-1a {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26),
+    0 4px 12px 0 rgba(121, 155, 254, 0.25);
+  box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26),
+    0 4px 12px 0 rgba(121, 155, 254, 0.25);
+}
 
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28),
+    0 4px 15px 0 rgba(36, 133, 255, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28),
+    0 4px 15px 0 rgba(36, 133, 255, 0.15);
+}
 
+.form-elegant .modal-header {
+  border-bottom: none;
+}
 
+.modal-dialog .form-elegant .btn .fab {
+  color: #2196f3 !important;
+}
+
+.form-elegant .modal-body,
+.form-elegant .modal-footer {
+  font-weight: 400;
 }
 span.danger:after {
   background-color: #ff98d7f5;
@@ -37,7 +86,6 @@ span.danger:after {
 ::before {
   box-sizing: border-box;
 }
-
 
 .danger,
 .safe {
@@ -160,7 +208,6 @@ tr td:hover {
   content: "";
   clear: both;
   display: table;
-
 }
 /* Slider */
 
@@ -217,11 +264,11 @@ tr td:hover {
   margin-left: auto;
   margin-right: auto;
 }
-a#telech{
+a#telech {
   color: #ff5c97;
 }
-a#telech:hover{
-  color: #5D00FF;
+a#telech:hover {
+  color: #5d00ff;
 }
 .slick-track:before,
 .slick-track:after {
