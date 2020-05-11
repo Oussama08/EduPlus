@@ -11,6 +11,8 @@
 	<!-- <link rel="manifest" href="site.webmanifest"> -->
 	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favic_eduplus2.png">
 	<!-- Place favicon.ico in the root directory -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" rel="stylesheet">
+
 
 
  <!-- CSS here -->
@@ -482,6 +484,7 @@
 			$('#covid_table').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
 	});
 	});
+	/*
 	$(document).ready(function(){
 			 $.get("https://covidma.herokuapp.com/api", function(data){
 					 var covid_data='';
@@ -497,7 +500,8 @@
 					 $('#covid_table_regions').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
 	 });
 	 });
-		/*$(document).ready(function(){
+	 */
+		$(document).ready(function(){
 		$.get("https://moroccostats.herokuapp.com/stats/coronavirus/countries/morocco/regions", function(data){
 			var covid_data='';
 				covid_data += '<tr >';
@@ -555,7 +559,7 @@
 			$('#covid_table_regions').append('<tr>  <td colspan="100%"> Chargement... </td> </tr>')
 	});
 	});
-	*/
+	
 	 $(document).ready(function(){
         $.get("https://corona.lmao.ninja/v2/countries/", function(data){
             var covid_data='';
